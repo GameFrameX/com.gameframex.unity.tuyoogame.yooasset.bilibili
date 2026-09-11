@@ -31,14 +31,39 @@
 // ==========================================================================================
 
 using UnityEngine;
+using UnityEngine.Scripting;
 
-namespace GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime
+namespace YooAsset.BiliBili
 {
-    public class GameFrameXYooAssetMinigameBiliBiliCroppingHelper : MonoBehaviour
+    /// <summary>
+    /// 防止代码运行时发生裁剪报错。将这个脚本添加到启动场景中。不会对逻辑有任何影响
+    /// </summary>
+    [Preserve]
+    [DisallowMultipleComponent]
+    public sealed class GameFrameXYooAssetMinigameBiliBiliCroppingHelper : MonoBehaviour
     {
+        private System.Type[] _types;
+
+        [UnityEngine.Scripting.Preserve]
         private void Start()
         {
-
+#if UNITY_WEBGL && ENABLE_BILIBILI_MINI_GAME && BILIBILIMINIGAME
+            _types = new[]
+            {
+                typeof(BiliBiliFileSystem),
+                typeof(BiliBiliFileSystemCreater),
+                typeof(BLBFSRequestPackageVersionOperation),
+                typeof(BLBFSLoadPackageManifestOperation),
+                typeof(BLBFSLoadBundleOperation),
+                typeof(BLBFSInitializeOperation),
+                typeof(BLBFSDownloadFileOperation),
+                typeof(RequestBiliBiliPackageVersionOperation),
+                typeof(RequestBiliBiliPackageHashOperation),
+                typeof(LoadBiliBiliPackageManifestOperation),
+                typeof(BiliBiliConfigHandler),
+                typeof(BiliBiliWebPlayModeFileSystemProvider),
+            };
+#endif
         }
     }
 }

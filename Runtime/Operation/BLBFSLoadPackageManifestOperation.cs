@@ -1,7 +1,7 @@
-#if UNITY_WEBGL && ENABLE_BILIBILI_MINI_GAME
+#if UNITY_WEBGL && ENABLE_BILIBILI_MINI_GAME && BILIBILIMINIGAME
 using YooAsset;
 
-namespace GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime
+namespace YooAsset.BiliBili
 {
 
 [UnityEngine.Scripting.Preserve]

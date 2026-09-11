@@ -1,10 +1,9 @@
-#if UNITY_WEBGL && ENABLE_BILIBILI_MINI_GAME
+#if UNITY_WEBGL && ENABLE_BILIBILI_MINI_GAME && BILIBILIMINIGAME
 using System.Collections.Generic;
 using UnityEngine;
 using YooAsset;
-using WeChatWASM;
 
-namespace GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime
+namespace YooAsset.BiliBili
 {
 
 [UnityEngine.Scripting.Preserve]
@@ -75,7 +74,7 @@ internal class BiliBiliFileSystem : IFileSystem
     }
 
     private readonly Dictionary<string, string> _cacheFilePaths = new Dictionary<string, string>(10000);
-    private WXFileSystemManager _fileSystemManager;
+    private WeChatWASM.WXFileSystemManager _fileSystemManager;
     private string _fileCacheRoot = string.Empty;
 
     /// <summary>
@@ -209,12 +208,12 @@ internal class BiliBiliFileSystem : IFileSystem
             RemoteServices = new WebRemoteServices(webRoot);
         }
 
-        _fileSystemManager = WXBase.GetFileSystemManager();
+        _fileSystemManager = WeChatWASM.WXBase.GetFileSystemManager();
 #if UNITY_EDITOR
         _fileCacheRoot = Application.persistentDataPath;
         return;
 #endif
-        _fileCacheRoot = WXBase.env.USER_DATA_PATH;
+        _fileCacheRoot = WeChatWASM.WXBase.env.USER_DATA_PATH;
     }
 
     [UnityEngine.Scripting.Preserve]

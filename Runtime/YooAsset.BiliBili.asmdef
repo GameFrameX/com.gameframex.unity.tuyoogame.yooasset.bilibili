@@ -1,9 +1,11 @@
 {
-  "name": "GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime",
-  "rootNamespace": "GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime",
+  "name": "YooAsset.BiliBili",
+  "rootNamespace": "YooAsset.BiliBili",
   "references": [
     "YooAsset.Runtime",
-    "YooAsset"
+    "YooAsset",
+    "GameFrameX.Runtime",
+    "GameFrameX.Asset.Runtime"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
