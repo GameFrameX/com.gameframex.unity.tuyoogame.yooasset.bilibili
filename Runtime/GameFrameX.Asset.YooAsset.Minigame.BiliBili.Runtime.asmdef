@@ -1,0 +1,23 @@
+{
+  "name": "GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime",
+  "rootNamespace": "GameFrameX.Asset.YooAsset.Minigame.BiliBili.Runtime",
+  "references": [
+    "YooAsset.Runtime",
+    "YooAsset"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [
+    {
+      "name": "com.bilibili.gamesdk",
+      "expression": "",
+      "define": "ENABLE_BILIBILI_MINI_GAME"
+    }
+  ],
+  "noEngineReferences": false
+}

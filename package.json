@@ -1,0 +1,34 @@
+{
+  "name": "com.gameframex.unity.tuyoogame.yooasset.bilibili",
+  "displayName": "Game Frame X YooAsset BiliBili",
+  "category": "Game Framework X",
+  "description": "YooAsset BiliBili mini-game FileSystem adapter | YooAsset B站小游戏适配",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "keywords": [
+    "GameFrameX",
+    "YooAsset",
+    "BiliBili",
+    "MiniGame"
+  ],
+  "repository": {
+    "name": "com.gameframex.unity.tuyoogame.yooasset.bilibili",
+    "url": "git+https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.bilibili.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Blank",
+    "email": "alianblank@outlook.com",
+    "url": "https://alianblank.com/"
+  },
+  "dependencies": {
+    "com.gameframex.unity.tuyoogame.yooasset": "2.9.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.cnb.cool/GameFrameX/npm/-/packages/"
+  },
+  "documentationUrl": "https://gameframex.doc.alianblank.com",
+  "changelogUrl": "https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.bilibili/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/gameframex/com.gameframex.unity.tuyoogame.yooasset.bilibili/blob/main/LICENSE.md"
+}
